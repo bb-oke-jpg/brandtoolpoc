@@ -29,3 +29,96 @@ background-color: currentColor;
 border: 1px solid #ccc;
 margin: 5px;
 }
+
+.color-options {
+display: flex;
+gap: 15px;
+margin-top: 15px;
+}
+
+.color-button-group {
+position: relative;
+display: inline-block;
+}
+
+.primary-color-button {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+border: 1px solid #ccc;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+.primary-color-button:hover {
+transform: scale(1.1);
+}
+
+/* Selected state for buttons */
+.primary-color-button.selected,
+.shade-button.selected {
+border: 3px solid #333;
+box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.shades-container {
+position: absolute;
+display: none;
+flex-direction: column;
+gap: 5px;
+top: 45px; /* Position below the primary button */
+left: 5px; /* Align with the primary button */
+z-index: 10;
+}
+
+.shade-button {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+border: 1px solid #ccc;
+cursor: pointer;
+transition: transform 0.2s;
+}
+
+.shade-button:hover {
+transform: scale(1.1);
+}
+
+/* Existing styles for the color preview and info */
+.color-preview {
+width: 100px;
+height: 100px;
+border-radius: 5px;
+margin: 10px 0;
+border: 1px solid #ddd;
+}
+
+.tint-shade-container {
+display: flex;
+flex-wrap: wrap;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.color-chip {
+width: 120px;
+text-align: center;
+}
+
+.color-sample {
+width: 100%;
+height: 60px;
+border-radius: 5px;
+margin-bottom: 5px;
+border: 1px solid #ddd;
+}
+
+.color-chip p {
+margin: 3px 0;
+font-size: 12px;
+}
+
+.related-colors {
+display: flex;
+gap: 15px;
+}
