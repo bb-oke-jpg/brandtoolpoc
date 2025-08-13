@@ -104,6 +104,8 @@ function deselectAllButtons() {
     });
 }
 
+
+
 // function showPrimaryColorInfo(colorIndex) {
 //     const selectedColor = colorData.colors[colorIndex];
 //     const colorInfoDiv = document.getElementById('colorInfo');
@@ -132,8 +134,32 @@ function deselectAllButtons() {
 function updatePreviewWindow(hexNum) {
     const previewWindow = document.getElementById('right-panel');
     previewWindow.style.backgroundColor = hexNum;
+    updateSVGFill(hexNum);
+
 }
 
+function updateSVGFill(hexColor) {
+    const svgObject = document.getElementById('svg-object');
+    if(svgObject && svgObject.contentDocument) {
+        //load svg object
+        if (svgObject.contentDocument.readyState === 'complete') {
+            const svgDoc = svgObject.contentDocument;
+            const paths = svgDoc.querySelectorAll('path, polygon, polyline');
+            paths.forEach(path => {
+                path.setAttribute('fill', hexColor);
+            });
+        } else {
+            svgObject.addEventListener('load', function() {
+                const svgDoc = svgObject.contentDocument;
+                const paths = svgDoc.querySelectorAll('path, polygon, polyline');
+                paths.forEach(path => {
+                    path.setAttribute('fill', hexColor);
+                });
+            });
+        }
+            
+    }
+}
 // function showShadeInfo(colorIndex, shadeIndex) {
 //     const selectedColor = colorData.colors[colorIndex];
 //     const selectedShade = selectedColor.shades[shadeIndex];

@@ -13,14 +13,18 @@
             <div>Pattern Selection Placeholder</div>
             <div>Select your color</div>
                 <div class="color-options" id="colorButtons">
-                    <!-- buttons get populated her by js script-->
+                    <!-- buttons get populated here by js script-->
                 </div>
         </div>
         <div class="right-panel" id="right-panel">
-            
+            <!-- The SVG object is hidden but used as a template -->
+            <object id="svg-object" data="brickPath.svg" type="image/svg+xml" style="display: none;"></object>
+            <!-- The generated pattern will be displayed here -->
+            <div id="pattern-container" style="width: 100%; height: 100%;"></div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- <script src="colorScript.js"></script> -->
+     <script src="svgMaker.js"></script>
 </body>
 </html>
