@@ -1,0 +1,116 @@
+{
+"colors": [
+  {
+    "name": "LEGO Bright Yellow",
+    "primaryHex": "#FFD400",
+    "tints": [
+      {"level": 1, "hex": "#fff9ae", "name": "Extra Light Yellow"},
+      {"level": 2, "hex": "#FFF579", "name": "LEGO Cool Yellow"},
+      {"level": 3, "hex": "#FDE351", "name": "Light Warm Yellow"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#FDBF0F", "name": "Warm Yellow"},
+      {"level": 2, "hex": "#fbab18", "name": "LEGO Flame Yellow"},
+      {"level": 3, "hex": "#DD9827", "name": "Dark Yellow"}
+    ]
+  },
+  {
+    "name": "LEGO Bright Orange",
+    "primaryHex": "#F47D20",
+    "tints": [
+      {"level": 1, "hex": "#FCCCA3", "name": "Extra Light Orange"},
+      {"level": 2, "hex": "#FAB57D", "name": "Apricot Orange"},
+      {"level": 3, "hex": "#", "name": "Light Orange"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#DB702B", "name": "Cinnamon Orange"},
+      {"level": 2, "hex": "#E6622C", "name": "LEGO Dark Orange"},
+      {"level": 3, "hex": "#905022", "name": "Burnt Sienna"}
+    ]
+  },
+  {
+    "name": "LEGO Bright Red",
+    "primaryHex": "#DD1A22",
+    "tints": [
+      {"level": 1, "hex": "#F5793", "name": "Light Coral Red"},
+      {"level": 2, "hex": "#F27173", "name": "LEGO Vibrant Coral"},
+      {"level": 3, "hex": "#E6504D", "name": "Cinnabar Red"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#BB2026", "name": "Chili Red"},
+      {"level": 2, "hex": "#D1C20", "name": "Pomegranate Red"},
+      {"level": 3, "hex": "#7F1318", "name": "LEGO Dark Red"}
+    ]
+  },
+  {
+    "name": "LEGO Light Purple",
+    "primaryHex": "#F4A0CD",
+    "tints": [
+      {"level": 1, "hex": "#FCEBF1", "name": "Extra Light Pink"},
+      {"level": 2, "hex": "#F9D4E4", "name": "Light Pink"},
+      {"level": 3, "hex": "#F7C1D8", "name": "Pale Pink"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#E98DB3", "name": "Bubblegum Pink"},
+      {"level": 2, "hex": "#E3599D", "name": "LEGO Bright Purple"},
+      {"level": 3, "hex": "#CC3789", "name": "Dark Pink"}
+    ]
+  },
+  {
+    "name": "LEGO Medium Lilac",
+    "primaryHex": "#4C2F92",
+    "tints": [
+      {"level": 1, "hex": "#9C74A", "name": "LEGO Medium Lavender"},
+      {"level": 2, "hex": "#7E59A8", "name": "Dark Lavender"},
+      {"level": 3, "hex": "#6A439A", "name": "Light Lilac"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#52D7F2", "name": "Violet"},
+      {"level": 2, "hex": "#2665E", "name": "Medium Violet"},
+      {"level": 3, "hex": "#1F1846", "name": "Dark Violet"}
+    ]
+  },
+  {
+    "name": "LEGO Bright Blue",
+    "primaryHex": "#00A3E1",
+    "tints": [
+      {"level": 1, "hex": "#9BFEA", "name": "LEGO Light Royal Blue"},
+      {"level": 2, "hex": "#56A3D9", "name": "Sky Blue"},
+      {"level": 3, "hex": "#0D84C7", "name": "Dark Sky Blue"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#005C99", "name": "Blue Velvet"},
+      {"level": 2, "hex": "#0445B0", "name": "Ocean Blue"},
+      {"level": 3, "hex": "#00395D", "name": "LEGO Earth Blue"}
+    ]
+  },
+  {
+    "name": "LEGO Dark Azur",
+    "primaryHex": "#00A3DA",
+    "tints": [
+      {"level": 1, "hex": "#C8E2F3", "name": "Light Cornflower"},
+      {"level": 2, "hex": "#9CEEA", "name": "Cornflower"},
+      {"level": 3, "hex": "#60BBE3", "name": "Seagull"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#0C88BC", "name": "Light Teal"},
+      {"level": 2, "hex": "#007A4D", "name": "Dark Teal"},
+      {"level": 3, "hex": "#00618B", "name": "Blue Lagoon"}
+    ]
+  },
+  {
+    "name": "LEGO Bright Green",
+    "primaryHex": "#00AF4D",
+    "tints": [
+      {"level": 1, "hex": "#BDEDC7", "name": "Minty"},
+      {"level": 2, "hex": "#8ECD44", "name": "Sea Foam"},
+      {"level": 3, "hex": "#66BF7E", "name": "Green Tea"}
+    ],
+    "shades": [
+      {"level": 1, "hex": "#009247", "name": "LEGO Dark Green"},
+      {"level": 2, "hex": "#006834", "name": "Forest Green"},
+      {"level": 3, "hex": "#00643D", "name": "LEGO Earth Green"}
+    ]
+  }
+]
+}
