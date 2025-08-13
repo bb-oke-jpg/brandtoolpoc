@@ -45,7 +45,7 @@ function generateColorButtons() {
                 colorIndex: index
             };
 
-            showPrimaryColorInfo(index);
+            updatePreviewWindow(color.primaryHex);
         });
 
         //create a container for the shade buttons
@@ -73,7 +73,7 @@ function generateColorButtons() {
                     shadeIndex: shadeIndex
                 };
 
-                showShadeInfo(index, shadeIndex);
+                updatePreviewWindow(shade.hex);
             });
 
             shadesContainer.appendChild(shadeButton);
@@ -87,7 +87,7 @@ function generateColorButtons() {
         buttonGroup.addEventListener('mouseleave', function() {
             setTimeout( function () {
                 shadesContainer.style.display = 'none';
-            }, 200); 
+            }, 200); //figure out if there's a nicer way to add delay
         });
 
         //appending new button elements to the DOM
@@ -104,41 +104,46 @@ function deselectAllButtons() {
     });
 }
 
-function showPrimaryColorInfo(colorIndex) {
-    const selectedColor = colorData.colors[colorIndex];
-    const colorInfoDiv = document.getElementById('colorInfo');
+// function showPrimaryColorInfo(colorIndex) {
+//     const selectedColor = colorData.colors[colorIndex];
+//     const colorInfoDiv = document.getElementById('colorInfo');
 
-    //display color information
-    colorInfoDiv.innerHTML = `
+//     //display color information
+//     colorInfoDiv.innerHTML = `
     
-        <h2>${selectedColor.name}</h2>
-        <div class="color-preview>" style="background-color: ${selectedColor.primaryHex}></div>
-        <p>Primary Color: ${selectedColor.primaryHex}</p>
+//         <h2>${selectedColor.name}</h2>
+//         <div class="color-preview>" style="background-color: ${selectedColor.primaryHex}></div>
+//         <p>Primary Color: ${selectedColor.primaryHex}</p>
 
-        <h3>Shades</h3>
-        <div class = "tint-shade-container">
-            ${selectedColor.shades.map(shade => `
-                <div class="color-chip">
-                    <div class="color-sample" style "background-color: ${shade.hex}"></div>
-                    <p>${shade.name}</p>
-                    <p>${shade.hex}</p>
-                    </div>
-                `).join('')
-            }
-        </div>
-    `;  
+//         <h3>Shades</h3>
+//         <div class = "tint-shade-container">
+//             ${selectedColor.shades.map(shade => `
+//                 <div class="color-chip">
+//                     <div class="color-sample" style "background-color: ${shade.hex}"></div>
+//                     <p>${shade.name}</p>
+//                     <p>${shade.hex}</p>
+//                     </div>
+//                 `).join('')
+//             }
+//         </div>
+//     `;  
+// }
+
+function updatePreviewWindow(hexNum) {
+    const previewWindow = document.getElementById('right-panel');
+    previewWindow.style.backgroundColor = hexNum;
 }
 
-function showShadeInfo(colorIndex, shadeIndex) {
-    const selectedColor = colorData.colors[colorIndex];
-    const selectedShade = selectedColor.shades[shadeIndex];
-    const colorInfoDiv = document.getElementById('colorInfo');
+// function showShadeInfo(colorIndex, shadeIndex) {
+//     const selectedColor = colorData.colors[colorIndex];
+//     const selectedShade = selectedColor.shades[shadeIndex];
+//     const colorInfoDiv = document.getElementById('colorInfo');
 
-    colorInfoDiv.innerHTML = `
-        <h2>${selectedShade.name}></h2>
-        <div class="color-preview" style="background-color: ${selectedShade.primaryHex}></div>
-        <p>Hex: ${selectedShade.hex}</p>
-    `;
-}
+//     colorInfoDiv.innerHTML = `
+//         <h2>${selectedShade.name}></h2>
+//         <div class="color-preview" style="background-color: ${selectedShade.primaryHex}></div>
+//         <p>Hex: ${selectedShade.hex}</p>
+//     `;
+// }
 
 document.addEventListener('DOMContentLoaded', loadColorData);
